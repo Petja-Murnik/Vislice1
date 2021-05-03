@@ -1,6 +1,6 @@
 import random   
 
-stevilo_dovoljenih_napak = 10
+stevilo_dovoljenih_napak = 9
 pravilna_crka = '+'
 ponovljena_crka = 'o'
 napacna_crka = '-'
