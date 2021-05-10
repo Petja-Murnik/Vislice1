@@ -1,9 +1,12 @@
 import bottle
 import model
 
-SKRIVNOST = 'MARIBOr'
+SKRIVNOST = 'MARIBOR'
+DATOTEKA_S_STANJEM = 'C:\\Users\\petja\\OneDrive\\Dokumenti\\UVP\\Vislice1\\stanje.json'
+DATOTEKA_Z_BESEDAMI = 'C:\\Users\\petja\\OneDrive\\Dokumenti\\UVP\\Vislice1\\besede.txt'
 
-vislice = model.Vislice()
+vislice = model.Vislice(DATOTEKA_S_STANJEM , DATOTEKA_Z_BESEDAMI )
+vislice.nalozi_igre_iz_datoteke()
 
 bottle.TEMPLATE_PATH.insert(0,"C:\\Users\\petja\\OneDrive\\Dokumenti\\UVP\\Vislice1\\views")
 @bottle.get('/')
