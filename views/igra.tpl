@@ -1,7 +1,6 @@
 % import model
 
-<!DOCTYPE html>
-<html>
+% rebase( 'base.tpl', title = 'igra')
 
 <body>
 
@@ -24,19 +23,21 @@
     % if poskus == model.zmaga:
     <h1>Zmaga!</h1>
     Uganili ste pravilno geslo.    
+    <form action='/nova_igra/' method = 'POST'>
+        <button type = 'submit'>Nova igra</button>
+    </form>
 
     % elif poskus == model.poraz:
     <h2>Izgubili ste!</h2>
     Pravilno geslo je bilo {{igra.geslo}}
-    
+    <form action='/nova_igra/' method = 'POST'>
+        <button type = 'submit'>Nova igra</button>
+    </form>
+
     % else: 
-    <form action="/igra/{{id_igre}}/" method="post">
+    <form action="/igra/" method="post">
         <input type="text" name="crka" autofocus>
         <button type="submit">Ugibaj!</button>
     </form>
 
     % end
-
-</body>
-
-</html>

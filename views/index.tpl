@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html>
-
-<body>
+% rebase( 'base.tpl', title = 'igra')
 
   <h1>Vislice</h1>
 
@@ -12,9 +9,6 @@
 
   <img src="img/10.jpg" alt="obesanje">
 
-  <form action="/igra/" method="GET">
+  <form action="/nova_igra/" method="POST">
     <button type="submit">Nova igra</button>
   </form>
-</body>
-
-</html>
